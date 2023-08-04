@@ -1,0 +1,170 @@
+# Resultados de la proyección
+
+## Ingresos
+
+### Total de contribución
+
+$$CT=PCon\times m\times\sum{can\times Sueldo}$$
+
+Donde:
+
+$CT$: Total de contribución.\
+$PCon$: Porcentaje de contribución.\
+$m$: Total de meses de contribución en un año.\
+$Can$: Cantidad de afiliados activos a la edad de $x$ años.\
+$Sueldo$: Sueldo promedio de los afiliados activos a la edad de $x$ años.\
+
+### Ingreso Financiero
+
+$$IFin=IntGVN+IntGPatrI$$ Donde:
+
+$IFin$: Ingreso Financiero.\
+$IntGVN$: Intereses generados por el valor.\
+$IntGPatrI$: Intereses generados por el patrimonio inicial
+
+## Egresos
+
+### Gasto administrativo
+
+$$GA=\%GA\times TI$$
+
+Donde:
+
+$GA$: Gasto adminidstrativo.\
+$\%GA$: Porcentaje de gasto administrativo.\
+$TI$: Total de ingresos (suma de las CT tanto de hombres como mujeres)
+
+Nota: En el supuesto %GA se utiliza un estimador de la relación del gasto administrativo entre el total de contribuciones, pero considerando la tasa del 3% de contribución. En caso de que en un análisis se modifique la tasa de contribución el $\%GA$ se debe ajustar multiplicándolo por el factor:
+
+$$\frac{0.03}{tasa\_contribucion\_propuesta}$$
+
+### Pensión total anual por vejez
+
+$PensionT$: Pensiones pagadas por vejez anualmente
+
+### Pensión total anual por invalidez
+
+$PensTI$: Pensiones pagadas por invalidez anualmente
+
+### Pensión total anual por viudez
+
+$PensTV$: Pensiones pagadas por viudez anualmente
+
+### Pensión total anual por orfandad
+
+$PensTH$: Pensiones pagadas por orfandad anualmente
+
+### Gastos por servicios médicos
+
+$$GServMed=\left(PensionT+PensTI\right)\times\%AtSal$$
+
+Donde[^5]:
+
+[^5]: Articulo N. 12, [@RegalmentoSalud]
+
+$GServMed$: Gastos por servicios médicos para jubilados y pensionados anual.\
+$PensionT$: Pensiones pagadas por vejez anualmente.\
+$PensTI$: Pensiones pagadas por invalidez anualmente.\
+$\%AtSal$: Porcentaje del seguro de atención a la salud.
+
+### Gastos por servicios fúnebres
+
+$$GFun=2\times Smin\times\left(Mue+MueJ+MueI\right)\times\%Smin$$
+
+Donde[^6]:
+
+[^6]: Artículo N. 57, [@reglamento]
+
+$GFun$: Gastos por servicios fúnebres anual.\
+$Smin$: Salario mínimo vigente en la categoría más baja.\
+$Mue$: Cantidad total de afiliados activos que fallecen en el año.\
+$MueJ$: Cantidad total de jubilados que fallecen en el año.\
+$MueI$: Cantidad total de afiliados en estado de invalidez que fallecen en el año.\
+$\%Smin$: Porcentaje de crecimiento anual del salario mínimo en su categoría más baja.
+
+### Total de egresos
+
+$$TE=GA+PensionT+PensTi+PensTV+PensTH+GservMed+GFun$$
+
+Donde:
+
+$TE$: Total de egresos al año.\
+$GA$: Gasto adminidstrativo.\
+$PensionT$: Pensiones pagadas por vejez anualmente.\
+$PensTI$: Pensiones pagadas por invalidez anualmente.\
+$PensTV$: Pensiones pagadas por viudez anualmente.\
+$PensTH$: Pensiones pagadas por orfandad anualmente.\
+$GServMed$: Gastos por servicios médicos para jubilados y pensionados anual.\
+$GFun$: Gastos por servicios fúnebres anual.
+
+## Valor Neto
+
+### Valor Neto
+
+$$VN=TI-TE$$ Donde:
+
+$VN$: Valor neto.\
+$TI$: Total de ingresos.\
+$TE$: Total de egresos.
+
+### Intereses generados
+
+$$IntGVN=\frac{VN}{2}\times\%IntGVN$$
+
+Donde:
+
+$IntGVN$: Intereses generados por el valor neto.\
+$VN$: Valor neto.\
+$\%IntGVN$: Porcentaje de intereses generados por el valor neto.
+
+$$ \% TRN = (1+inf)\times (1+tr)- 1 $$
+
+Donde:
+
+$\%TRN$: Tasa de rendimiento nominal del fondo.\
+$tr$: Tasa de rendimiento real.\
+$inf$: Inflación.
+
+## Patrimonio
+
+### Intereses generados por el patrimonio inicial
+
+$$IntGPatrI= \%IntGPatrI \times PatrI$$
+
+Donde:
+
+$IntGPatrI$: Intereses generados por el patrimonio inicial.\
+$\%IntGPatrI$: Porcentaje de intereses generados por el patrimonio inicial.\
+$PatrI$: Patrimonio inicial.
+
+## Excedentes
+
+$$Exc=VN+IntGVN+IntGPatrI$$
+
+Donde:
+
+$Exc$: Excedentes del año.\
+$IntGVN$: Intereses generados por el valor neto.\
+$VN$: Valor neto.\
+$IntGPatrI$: Intereses generados por el patrimonio inicial.
+
+## Patrimonio final
+
+$$PatrF=PatrI+Exc$$
+
+Donde:
+
+$PatrF$: Patrimonio final.\
+$PatrI$: Patrimonio inicial.\
+$Exc$: Excedentes del año.
+
+## Patrimonio real
+
+$$PatrR=PatrF\times\left(1+inf\right)^{-\left(k-n\right)} \quad \text{para}\quad k\geq n+1$$
+
+Donde:
+
+$PatrR$: Patrimonio real.\
+$PatrF$: Patrimonio final.\
+$inf$: Inflación.\
+$n$: Año correspondiente al estudio.

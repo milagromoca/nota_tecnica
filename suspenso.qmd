@@ -1,0 +1,56 @@
+# Proyección de afiliados en suspenso
+
+## Información básica de afiliado en suspenso
+
+a)  Distribución de probabilidad para la jubilación: Para los afiliados en suspenso se toma la distribución de probabilidad de jubilarse de los afiliados activos.
+b)  Edad del afiliado en suspenso.
+c)  Cantidad de afiliados activos por edad.
+d)  Salario.
+
+## Parámetros en la proyección de afiliados en suspenso
+
+a)  Tasa de incremento salarial
+b)  Porcentaje de contribución
+
+## Campos proyectados para afiliados en suspenso
+
+### Cantidad de afiliados en suspenso que fallecen
+
+$$Mue\_sus_{x,j}=CanS_{x,j}\times{qa}_x$$
+
+Donde:
+
+$Mue\_sus_{x,j}$: Cantidad de afiliados en suspenso que fallecen a la edad $x$ en el año $j$.\
+$CanS_{x,j}$: Cantidad de afiliados en suspenso de edad $x$ en el año $j$.\
+${qa}_x$: Probabilidad de que un activo fallezca a la edad $x$.
+
+### Cantidad de afiliados en suspenso que se jubila
+
+$$Jub\_sus_{x,j}=CanS_{x,j}\times pja\_dm_x$$
+
+Donde:
+
+$Jub\_sus_{x,j}$: Cantidad de afiliados activos que se jubilan a la edad $x$ en el año $j$.\
+$CanS_{x,j}$: Cantidad de afiliados en suspenso a la edad $x$ en el año $j$.\
+$pja\_dm_x$: Probabilidad de decremento múltiple de que un activo se jubile a la edad $x$.
+
+### Cantidad de afiliados en suspenso proyectado
+
+$$CanS_{x,j}=CanS_{x-1,j-1}\times\left(1-{qa}_{x-1}-pja\_dm_{x-1}\right)$$
+
+Donde:
+
+$CanS_{x,j}$: Cantidad de afiliados en suspenso de edad $x$ en el año $j$.\
+$CanS_{x-1,j-1}$: Cantidad de afiliados en suspenso de edad $x-1$ en el año $j-1$.\
+${qa}_{x-1}$: Probabilidad de que un activo fallezca a la edad $x-1$.\
+$pja\_dm_{x-1}$: Probabilidad de decremento múltiple de que un activo se jubile a la edad $x-1$.
+
+### Sueldo promedio de los afiliados en suspenso proyectado
+
+$$Sueldo\_sus_{x,j}={Sueldo\_sus}_{x,j-1}\times\left(1+{i_{sal}}_j\right)$$
+
+Donde:
+
+$Sueldo\_sus_{x,j}$: Sueldo promedio de los afiliados en suspenso de edad $x$ en el año $j$.\
+$Sueldo\_sus_{x,j-1}$: Sueldo promedio de los afiliados en suspenso de edad $x$ en el año $j-1$.\
+${i_{sal}}_j$: Incremento salarial en el año $j$.

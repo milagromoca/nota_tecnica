@@ -1,0 +1,268 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Nota Tecnica",
+    "section": "",
+    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "2  Introduction",
+    "section": "",
+    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "summary.html",
+    "href": "summary.html",
+    "title": "3  Summary",
+    "section": "",
+    "text": "In summary, this book has no content whatsoever.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "“Reglamento General de La Ley Del Seguro Social.” 2005. https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf.\n\n\n“Reglamento Para La Atención Medica de Los Jubilados y\nPensionados.” 2009."
+  },
+  {
+    "objectID": "parametros_generales.html",
+    "href": "parametros_generales.html",
+    "title": "1  Parametros generales",
+    "section": "",
+    "text": "Variable\nNotación\n\n\n\n\nPorcentaje de crecimiento poblacional\n\\(pIn\\)\n\n\nTasa técnica real\n\\(tr\\)\n\n\nTasa inflación\n\\(inf\\)\n\n\nTasa rendimiento efectiva\n\\(\\%TRN\\)\n\n\nTasa incremento salarial\n\\(i_{sal}\\)\n\n\nTasa total de contribución\n\\(PCon\\)\n\n\nPorcentaje de gastos administrativos\n\\(\\%GA\\)\n\n\nNúmero de contribuciones al año\n\\(m\\)\n\n\nPorcentaje aporte salud pensiones por invalidez y vejez\n\\(\\%AtSal\\)\n\n\nNúmero de pensiones al año\n\\(m_p\\)\n\n\nDiferencia edades hombre y mujer casados\n\\(d\\)\n\n\nTasa remplazo pensiones viudez\n\\(r_v\\)\n\n\nTasa remplazo pensiones orfandad\n\\(r_o\\)\n\n\nBeneficio ayuda fúnebre 2019\n\\(2\\times Smin\\)\n\n\nTasa crecimiento del Beneficio de ayuda fúnebre\n\\(\\%Smin\\)\n\n\nTasa de revalorización\n\\(i_{rev}\\)\n\n\nEdad obligatoria de jubilación\n\\(E_{oj}\\)"
+  },
+  {
+    "objectID": "parametros_generales.html#fórmula-para-estimar-probabilidades-de-los-decrementos-múltiples",
+    "href": "parametros_generales.html#fórmula-para-estimar-probabilidades-de-los-decrementos-múltiples",
+    "title": "1  Parametros generales",
+    "section": "1.1 Fórmula para estimar probabilidades de los decrementos múltiples",
+    "text": "1.1 Fórmula para estimar probabilidades de los decrementos múltiples\n\\[q_x^{(i)}=q_x^{\\prime(i)}\\left[1-\\frac{\\sum_{j=1,j\\neq i}^{4}q_x^{\\prime(j)}}{2}+\\frac{q_x^{\\prime(i+1)}\\times q_x^{\\prime(i+2)}+\\left(q_x^{\\prime(i+1)}+q_x^{\\prime(i+2)}\\right)\\times q_x^{\\prime(k+3)}}{3}-\\frac{\\prod_{j=1,j\\neq i}^{4}q_x^{\\prime(j)}}{4}\\right]\\]\nDonde:\n\\(q_x^{\\prime(i)}\\): Es la probabilidad individual de salir de un grupo por la causa i para una persona de edad x.\n\\(q_x^{(i)}\\): Es la probabilidad de salir del grupo por la causa i para una persona de edad x.\n\\(i\\): Causa de salida, \\(i=1,2,3,4\\)\nNota: Entiéndase la notación siguiente como \\((i+x)=modulo(i+x,\\ 4)\\)"
+  },
+  {
+    "objectID": "parametros_generales.html#notación-de-tablas-de-probabilidades",
+    "href": "parametros_generales.html#notación-de-tablas-de-probabilidades",
+    "title": "1  Parametros generales",
+    "section": "1.2 Notación de tablas de probabilidades",
+    "text": "1.2 Notación de tablas de probabilidades\n\\({qa}_x\\): Probabilidad de que un activo fallezca a la edad \\(x\\).\n\\({ia}_x\\): Probabilidad de que un activo se invalide a la edad \\(x\\).\n\\({pja}_x\\): Probabilidad de que un activo se jubile a la edad \\(x\\).\n\\({ra}_x\\): Probabilidad de que un activo se retire a la edad \\(x\\).\n\\({qa\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo fallezca a la edad \\(x\\).\n\\({ia\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se invalide a la edad \\(x\\).\n\\({pja\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se jubile a la edad \\(x\\).\n\\({ra\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se retire a la edad \\(x\\).\n\\({qi}_x\\): Probabilidad de que un inválido fallezca a la edad \\(x\\).\n\\({qj}_x\\): Probabilidad de que un jubilado fallezca a la edad \\(x\\).\n\\({ping}_x\\): Probabilidad de que un activo ingrese al sistema a la edad \\(x\\).\n\\(pcas_x\\): Probabilidad de que un afiliado este casado a la edad \\(x\\)."
+  },
+  {
+    "objectID": "afiliados_activos.html#infromación-básica-afiliados-activos",
+    "href": "afiliados_activos.html#infromación-básica-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.1 Infromación básica afiliados activos",
+    "text": "2.1 Infromación básica afiliados activos\n\nDistribución de probabilidad para la jubilación: Se ha observado que no todos los afiliados que ya cumplen con los requisitos de jubilación se retiran justo a la edad que los cumplen, por lo que se ha tomado en cuenta esta distribución de la probabilidad para la jubilación de afiliados activos.\nDistribución de probabilidad para ingresar al sistema.\nEdad del afiliado activo.\nCantidad de afiliados activos por edad.\nSalario."
+  },
+  {
+    "objectID": "afiliados_activos.html#parámetros-en-la-proyección-de-afiliados-activos",
+    "href": "afiliados_activos.html#parámetros-en-la-proyección-de-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.2 Parámetros en la proyección de afiliados activos",
+    "text": "2.2 Parámetros en la proyección de afiliados activos\n\nPorcentaje de crecimiento poblacional\nTasa de incremento salarial\nNumero de contribuciones al año\nNumero de pensiones al año\nPorcentaje de contribución"
+  },
+  {
+    "objectID": "afiliados_activos.html#campos-proyectados-para-afiliados-activos",
+    "href": "afiliados_activos.html#campos-proyectados-para-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.3 Campos proyectados para afiliados Activos",
+    "text": "2.3 Campos proyectados para afiliados Activos\n\n2.3.1 Cantidad de afiliados activos que se invalidan\n\\[Inv_{x,j}=Can_{x,j}\\times{ia\\_dm}_x\\]\nDonde:\n\\(Inv_{x,j}\\): Cantidad de afiliados activos que se invalidan a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\({ia\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se invalide a la edad \\(x\\).\n\n\n2.3.2 Cantidad de afiliados activos que fallecen\n\\[Mue_{x,j}=Can_{x,j}\\times{qa\\_dm}_x\\]\nDonde:\n\\(Mue_{x,j}\\): Cantidad de afiliados activos que fallecen a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\({qa\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo fallezca a la edad \\(x\\).\n\n\n2.3.3 Cantidad de afiliados activos que se jubilan\n\\[Jub_{x,j}=Can_{x,j}\\times p{ja\\_dm}_x\\]\nDonde:\n\\(Jub_{x,j}\\): Cantidad de afiliados activos que se jubila a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\(p{ja\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se jubile a la edad \\(x\\).\n\n\n2.3.4 Incremento de afiliados activos\n\\[{CIn}_j={pIn}_j\\ \\times{CanT}_j\\]\nDonde:\n\\({CIn}_j\\): Incremento de afiliados activos para el año \\(j\\).\n\\({pIn}_j\\): Tasa de incremento poblacional.\n\\({CanT}_j\\): Cantidad total de afiliados activos.\n\\({CanT}_j=\\sum_{x=18}^{110}{Can_{x,j-1}}\\)\n\n\n2.3.5 Incremento total de afiliados activos\n\\[{InT}_j={CIn}_j+\\sum_{x=18}^{109}\\left({qtot}_{x+1}\\times{Can}_{x,j-1}\\right)\\]\nDonde:\n\\({InT}_j\\): Incremento total de los afiliados activos en el año \\(j\\).\n\\({CIn}_j\\): Incremento de afiliados activos en el año \\(j\\).\n\\(Can_{x,j-1}\\): Cantidad de afiliados activos de edad \\(x\\) en el año anterior.\n\\({qtot}_x\\): Probabilidad total de salidas del sistema para un afiliado de edad \\(x\\).\n\\[{qtot}_x={qa\\_dm}_x+{ia\\_dm}_x+{ra\\_dm}_x+p{ja\\_dm}_x\\]\n\n\n2.3.6 Porcentaje real de incremento de afiliados activos\n\\[{PRIn}_j=\\ \\frac{{InT}_j}{{CanT}_j}\\]\nDonde:\n\\({PRIn}_j\\): Porcentaje real de incremento de afiliados activos en el año \\(j\\).\n\\({InT}_j\\): Incremento total de los afiliados activos en el año \\(j\\).\n\\({CanT}_j\\): Cantidad total de afiliados activos en el año \\(j\\).\n\n\n2.3.7 Total de contribución de afiliados activos\n\\[{CT}_j={PCon}_j\\ \\times m\\times\\sum{Can_{x,j}\\times{Sueldo}_{x,j}}\\]\nDonde:\n\\({CT}_j\\): Total de contribución de afiliados activos en el año \\(j\\).\n\\({PCon}_j\\): Porcentaje de contribución que realizan los afiliados activos en el año \\(j\\).\n\\(m\\): Total de meses de contribución que realizan los afiliados activos en un año.\n\\(Can_{x,j}\\): Cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\({Suledo}_{x,j}\\): Sueldo promedio de los afiliados activos de edad \\(x\\) en el año \\(j\\).\n\n\n2.3.8 Variación Interanual de la Cantidad de Afiliados Activos\n\\[Vi_{x,j}=ping_x\\ \\times{InT}_j\\]\nDonde:\n\\(Vi_{x,j}\\): Variación interanual de la cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(ping_x\\): Probabilidad de que un activo ingrese al sistema a la edad \\(x\\).\n\\({InT}_j\\): Incremento total de afiliados activos en el año \\(j\\).\n\n\n2.3.9 Cantidad de afiliados activos proyectada\n\\[Can_{x,j}=Can_{x-1,j-1}\\times\\left(1-{qtot}_{x-1}\\right)+\\ Vi_{x,j}\\]\nDonde:\n\\(Can_{x,j}\\): Cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(Can_{x-1,j-1}\\): Cantidad de afiliados activos de edad \\(x-1\\) en el año anterior.\n\\(Vi_{x,j}\\): Variación interanual de la cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\({qtot}_{x-1}\\): Probabilidad total de salidas del sistema para un afiliado de edad \\(x-1\\).\n\n\n2.3.10 Sueldo promedio de los afiliados activos proyectado\n\\[Sueldo_{x,j}=Sueldo_{x,j-1}\\times\\left(1+{i_{sal}}_j\\right)\\]\nDonde:\n\\(Sueldo_{x,j}\\): Sueldo promedio de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(Sueldo_{x,j-1}\\): Sueldo promedio de afiliados activos de edad \\(x\\) en el año anterior.\n\\({i_{sal}}_j\\): Porcentaje de Incremento salarial en el año \\(j\\)."
+  },
+  {
+    "objectID": "activos.html#infromación-básica-afiliados-activos",
+    "href": "activos.html#infromación-básica-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.1 Infromación básica afiliados activos",
+    "text": "2.1 Infromación básica afiliados activos\n\nDistribución de probabilidad para la jubilación: Se ha observado que no todos los afiliados que ya cumplen con los requisitos de jubilación se retiran justo a la edad que los cumplen, por lo que se ha tomado en cuenta esta distribución de la probabilidad para la jubilación de afiliados activos.\nDistribución de probabilidad para ingresar al sistema.\nEdad del afiliado activo.\nCantidad de afiliados activos por edad.\nSalario."
+  },
+  {
+    "objectID": "activos.html#parámetros-en-la-proyección-de-afiliados-activos",
+    "href": "activos.html#parámetros-en-la-proyección-de-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.2 Parámetros en la proyección de afiliados activos",
+    "text": "2.2 Parámetros en la proyección de afiliados activos\n\nPorcentaje de crecimiento poblacional\nTasa de incremento salarial\nNumero de contribuciones al año\nNumero de pensiones al año\nPorcentaje de contribución"
+  },
+  {
+    "objectID": "activos.html#campos-proyectados-para-afiliados-activos",
+    "href": "activos.html#campos-proyectados-para-afiliados-activos",
+    "title": "2  Proyección afiliados activos",
+    "section": "2.3 Campos proyectados para afiliados Activos",
+    "text": "2.3 Campos proyectados para afiliados Activos\n\n2.3.1 Cantidad de afiliados activos que se invalidan\n\\[Inv_{x,j}=Can_{x,j}\\times{ia\\_dm}_x\\]\nDonde:\n\\(Inv_{x,j}\\): Cantidad de afiliados activos que se invalidan a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\({ia\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se invalide a la edad \\(x\\).\n\n\n2.3.2 Cantidad de afiliados activos que fallecen\n\\[Mue_{x,j}=Can_{x,j}\\times{qa\\_dm}_x\\]\nDonde:\n\\(Mue_{x,j}\\): Cantidad de afiliados activos que fallecen a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\({qa\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo fallezca a la edad \\(x\\).\n\n\n2.3.3 Cantidad de afiliados activos que se jubilan\n\\[Jub_{x,j}=Can_{x,j}\\times p{ja\\_dm}_x\\]\nDonde:\n\\(Jub_{x,j}\\): Cantidad de afiliados activos que se jubila a la edad \\(x\\) en el año \\(j\\).\n\\(Can_{x,j}\\): Cantidad de afiliados activos a la edad \\(x\\) en el año \\(j\\).\n\\(p{ja\\_dm}_x\\): Probabilidad de decremento múltiple de que un activo se jubile a la edad \\(x\\).\n\n\n2.3.4 Incremento de afiliados activos\n\\[{CIn}_j={pIn}_j\\ \\times{CanT}_j\\]\nDonde:\n\\({CIn}_j\\): Incremento de afiliados activos para el año \\(j\\).\n\\({pIn}_j\\): Tasa de incremento poblacional.\n\\({CanT}_j\\): Cantidad total de afiliados activos.\n\\({CanT}_j=\\sum_{x=18}^{110}{Can_{x,j-1}}\\)\n\n\n2.3.5 Incremento total de afiliados activos\n\\[{InT}_j={CIn}_j+\\sum_{x=18}^{109}\\left({qtot}_{x+1}\\times{Can}_{x,j-1}\\right)\\]\nDonde:\n\\({InT}_j\\): Incremento total de los afiliados activos en el año \\(j\\).\n\\({CIn}_j\\): Incremento de afiliados activos en el año \\(j\\).\n\\(Can_{x,j-1}\\): Cantidad de afiliados activos de edad \\(x\\) en el año anterior.\n\\({qtot}_x\\): Probabilidad total de salidas del sistema para un afiliado de edad \\(x\\).\n\\[{qtot}_x={qa\\_dm}_x+{ia\\_dm}_x+{ra\\_dm}_x+p{ja\\_dm}_x\\]\n\n\n2.3.6 Porcentaje real de incremento de afiliados activos\n\\[{PRIn}_j=\\ \\frac{{InT}_j}{{CanT}_j}\\]\nDonde:\n\\({PRIn}_j\\): Porcentaje real de incremento de afiliados activos en el año \\(j\\).\n\\({InT}_j\\): Incremento total de los afiliados activos en el año \\(j\\).\n\\({CanT}_j\\): Cantidad total de afiliados activos en el año \\(j\\).\n\n\n2.3.7 Total de contribución de afiliados activos\n\\[{CT}_j={PCon}_j\\ \\times m\\times\\sum{Can_{x,j}\\times{Sueldo}_{x,j}}\\]\nDonde:\n\\({CT}_j\\): Total de contribución de afiliados activos en el año \\(j\\).\n\\({PCon}_j\\): Porcentaje de contribución que realizan los afiliados activos en el año \\(j\\).\n\\(m\\): Total de meses de contribución que realizan los afiliados activos en un año.\n\\(Can_{x,j}\\): Cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\({Suledo}_{x,j}\\): Sueldo promedio de los afiliados activos de edad \\(x\\) en el año \\(j\\).\n\n\n2.3.8 Variación Interanual de la Cantidad de Afiliados Activos\n\\[Vi_{x,j}=ping_x\\ \\times{InT}_j\\]\nDonde:\n\\(Vi_{x,j}\\): Variación interanual de la cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(ping_x\\): Probabilidad de que un activo ingrese al sistema a la edad \\(x\\).\n\\({InT}_j\\): Incremento total de afiliados activos en el año \\(j\\).\n\n\n2.3.9 Cantidad de afiliados activos proyectada\n\\[Can_{x,j}=Can_{x-1,j-1}\\times\\left(1-{qtot}_{x-1}\\right)+\\ Vi_{x,j}\\]\nDonde:\n\\(Can_{x,j}\\): Cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(Can_{x-1,j-1}\\): Cantidad de afiliados activos de edad \\(x-1\\) en el año anterior.\n\\(Vi_{x,j}\\): Variación interanual de la cantidad de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\({qtot}_{x-1}\\): Probabilidad total de salidas del sistema para un afiliado de edad \\(x-1\\).\n\n\n2.3.10 Sueldo promedio de los afiliados activos proyectado\n\\[Sueldo_{x,j}=Sueldo_{x,j-1}\\times\\left(1+{i_{sal}}_j\\right)\\]\nDonde:\n\\(Sueldo_{x,j}\\): Sueldo promedio de afiliados activos de edad \\(x\\) en el año \\(j\\).\n\\(Sueldo_{x,j-1}\\): Sueldo promedio de afiliados activos de edad \\(x\\) en el año anterior.\n\\({i_{sal}}_j\\): Porcentaje de Incremento salarial en el año \\(j\\)."
+  },
+  {
+    "objectID": "suspenso.html#información-básica-de-afiliado-en-suspenso",
+    "href": "suspenso.html#información-básica-de-afiliado-en-suspenso",
+    "title": "3  Proyección de afiliados en suspenso",
+    "section": "3.1 Información básica de afiliado en suspenso",
+    "text": "3.1 Información básica de afiliado en suspenso\n\nDistribución de probabilidad para la jubilación: Para los afiliados en suspenso se toma la distribución de probabilidad de jubilarse de los afiliados activos.\nEdad del afiliado en suspenso.\nCantidad de afiliados activos por edad.\nSalario."
+  },
+  {
+    "objectID": "suspenso.html#parámetros-en-la-proyección-de-afiliados-en-suspenso",
+    "href": "suspenso.html#parámetros-en-la-proyección-de-afiliados-en-suspenso",
+    "title": "3  Proyección de afiliados en suspenso",
+    "section": "3.2 Parámetros en la proyección de afiliados en suspenso",
+    "text": "3.2 Parámetros en la proyección de afiliados en suspenso\n\nTasa de incremento salarial\nPorcentaje de contribución"
+  },
+  {
+    "objectID": "suspenso.html#campos-proyectados-para-afiliados-en-suspenso",
+    "href": "suspenso.html#campos-proyectados-para-afiliados-en-suspenso",
+    "title": "3  Proyección de afiliados en suspenso",
+    "section": "3.3 Campos proyectados para afiliados en suspenso",
+    "text": "3.3 Campos proyectados para afiliados en suspenso\n\n3.3.1 Cantidad de afiliados en suspenso que fallecen\n\\[Mue\\_sus_{x,j}=CanS_{x,j}\\times{qa}_x\\]\nDonde:\n\\(Mue\\_sus_{x,j}\\): Cantidad de afiliados en suspenso que fallecen a la edad \\(x\\) en el año \\(j\\).\n\\(CanS_{x,j}\\): Cantidad de afiliados en suspenso de edad \\(x\\) en el año \\(j\\).\n\\({qa}_x\\): Probabilidad de que un activo fallezca a la edad \\(x\\).\n\n\n3.3.2 Cantidad de afiliados en suspenso que se jubila\n\\[Jub\\_sus_{x,j}=CanS_{x,j}\\times pja\\_dm_x\\]\nDonde:\n\\(Jub\\_sus_{x,j}\\): Cantidad de afiliados activos que se jubilan a la edad \\(x\\) en el año \\(j\\).\n\\(CanS_{x,j}\\): Cantidad de afiliados en suspenso a la edad \\(x\\) en el año \\(j\\).\n\\(pja\\_dm_x\\): Probabilidad de decremento múltiple de que un activo se jubile a la edad \\(x\\).\n\n\n3.3.3 Cantidad de afiliados en suspenso proyectado\n\\[CanS_{x,j}=CanS_{x-1,j-1}\\times\\left(1-{qa}_{x-1}-pja\\_dm_{x-1}\\right)\\]\nDonde:\n\\(CanS_{x,j}\\): Cantidad de afiliados en suspenso de edad \\(x\\) en el año \\(j\\).\n\\(CanS_{x-1,j-1}\\): Cantidad de afiliados en suspenso de edad \\(x-1\\) en el año \\(j-1\\).\n\\({qa}_{x-1}\\): Probabilidad de que un activo fallezca a la edad \\(x-1\\).\n\\(pja\\_dm_{x-1}\\): Probabilidad de decremento múltiple de que un activo se jubile a la edad \\(x-1\\).\n\n\n3.3.4 Sueldo promedio de los afiliados en suspenso proyectado\n\\[Sueldo\\_sus_{x,j}={Sueldo\\_sus}_{x,j-1}\\times\\left(1+{i_{sal}}_j\\right)\\]\nDonde:\n\\(Sueldo\\_sus_{x,j}\\): Sueldo promedio de los afiliados en suspenso de edad \\(x\\) en el año \\(j\\).\n\\(Sueldo\\_sus_{x,j-1}\\): Sueldo promedio de los afiliados en suspenso de edad \\(x\\) en el año \\(j-1\\).\n\\({i_{sal}}_j\\): Incremento salarial en el año \\(j\\)."
+  },
+  {
+    "objectID": "invalidez.html#información-básica-para-invalidez",
+    "href": "invalidez.html#información-básica-para-invalidez",
+    "title": "5  Proyección Invalidez",
+    "section": "5.1 Información básica para invalidez",
+    "text": "5.1 Información básica para invalidez\n\nProbabilidad de muerte que tiene un afiliado en estado de invalidez.\nEdad del afiliado en estado de invalidez.\nCantidad de afiliados en estado de invalidez por edad.\nMonto de la pensión por invalidez."
+  },
+  {
+    "objectID": "invalidez.html#parámetros-utilizados-para-la-proyección-por-invalidez",
+    "href": "invalidez.html#parámetros-utilizados-para-la-proyección-por-invalidez",
+    "title": "5  Proyección Invalidez",
+    "section": "5.2 Parámetros utilizados para la proyección por invalidez",
+    "text": "5.2 Parámetros utilizados para la proyección por invalidez\n\nTasa de incremento de la pensión\nTasa de revalorización"
+  },
+  {
+    "objectID": "invalidez.html#campos-proyectados-para-invalidez",
+    "href": "invalidez.html#campos-proyectados-para-invalidez",
+    "title": "5  Proyección Invalidez",
+    "section": "5.3 Campos proyectados para invalidez",
+    "text": "5.3 Campos proyectados para invalidez\n\n5.3.1 Cantidad de afiliados en estado de invalidez por edad\n\\[CanI_{x,j}=Inv_{x-1,j-1}+CanI_{x-1,j-1}-MueI_{x-1,j-1}\\]\nDonde:\n\\(CanI_{x,j}\\): Cantidad de afiliados en estado de invalidez de edad \\(x\\) en el año \\(j\\).\n\\(Inv_{x-1,j-1}\\): Afiliados activos que se invalidan a la edad \\(x-1\\) en el año anterior.\n\\(CanI_{x-1,j-1}\\): Cantidad de afiliados en estado de invalidez de edad \\(x-1\\) en el año anterior.\n\\(MueI_{x-1,j-1}\\): Afiliados en estado de invalidez que fallecen de edad \\(x-1\\) en el año anterior.\n\n\n5.3.2 Cantidad de afiliados en estado de invalidez que fallecen\n\\[MueI_{x,j}=CanI_{x,j}\\times{qi}_x\\]\nDonde:\n\\(MueI_{x,j}\\): Afiliados en estado de invalidez que fallecen de edad \\(x\\) en el año \\(j\\).\n\\(CanI_{x,j}\\): Cantidad de afiliados en estado de invalidez de edad \\(x\\) en el año \\(j\\).\n\\({qi}_x\\): Probabilidad de que un inválido fallezca a la edad \\(x\\).\n\n\n5.3.3 Pensión por invalidez\n\\[Pen{sI}_{x,j}=\\ \\frac{Pen{sI}_{x-1,j-1}\\times\\left(1+i_{pen}\\right)\\times{CanI}_{x-1,J-1}\\left(1-{qi}_{x-1}\\right)+Inv_{x,j}\\times Sal_{x,j}\\times0.4}{CanI_{x,j}}\\]\nDonde1:\n\\(Pen{sI}_{x,j}\\): Monto de pension al fallecimiento de un inválido de edad \\(x\\) en el año \\(j\\).\n\\(i_{pen}\\): Porcentaje de incremento de la pensión.\n\\(Sal_{x,j}\\): Salario de los afiliados activos a la edad de \\(x\\) años.\n\\(CantI_{x,j}\\): Cantidad de afiliados en estado de invalidez a la edad de \\(x\\) años.\n\\(Inv_{x,j}\\): Afiliados activos que se invalidaron a la edad de \\(x\\) años.\n\\(CanI_{x-1,j-1}\\): Cantidad de afiliados en estado de invalidez de edad \\(x-1\\) años.\n\\(MueI_{x-1,j-1}\\): Cantidad de afiliados en estado de invalidez que fallecieron a la edad de \\(x-1\\) años.\n\\({qi}_{x-1}\\): Probabilidad de que un inválido fallezca a la edad \\(x-1\\).\n\n\n5.3.4 Pensión promedio por invalidez\n\\[{PensPromI}_{x,j}=\\ \\frac{\\sum{CanI_{x,j}\\times P e n{sI}_{x,j}}}{\\sum{CanI_{x,j}}}\\]\nDonde:\n\\({PensPromI}_{x,j}\\): Pensión promedio por invalidez.\n\\(CanI_{x,j}\\): Cantidad de invalidez a la edad \\(x\\) años.\n\\(Pen{sI}_{x,j}\\): Pensión mensual para un afiliado en estado de invalidez de \\(x\\) años.\n\n\n5.3.5 Pago total de pensiones por invalidez al año\n\\[{PenIT}_{x,j}={num\\_pension}_j\\times\\sum{{PensI}_{x,j}\\times{CanI}_{x,j}}\\]\nDonde:\n\\({num\\_pension}_j\\): Número de pensiones en el año \\(j\\).\n\\({PensIT}_{x,j}\\): Pago total de pensiones por invalidez al año.\n\\(CanI_{x,j}\\): Cantidad de afiliados en estado de invalidez de \\(x\\) años.\n\\(PensI_{x,j}\\): Pensión mensual para un afiliado en estado de invalidez de \\(x\\) años."
+  },
+  {
+    "objectID": "invalidez.html#footnotes",
+    "href": "invalidez.html#footnotes",
+    "title": "5  Proyección Invalidez",
+    "section": "",
+    "text": "Articulo N. 111, (Reglamento General de la Ley del Seguro Social, 2005)↩︎"
+  },
+  {
+    "objectID": "jubilados.html#información-básica-afiliados-jubilados",
+    "href": "jubilados.html#información-básica-afiliados-jubilados",
+    "title": "4  Proyección afiliados jubilados",
+    "section": "4.1 Información básica afiliados jubilados",
+    "text": "4.1 Información básica afiliados jubilados\n\nProbabilidad de muerte de un afilado jubilado.\nEdad del afiliado jubilado.\nCantidad de afiliados jubilados por edad.\nMonto de pensión mensual para jubilados."
+  },
+  {
+    "objectID": "jubilados.html#parámetros-en-la-proyección-de-afiliados-jubilados",
+    "href": "jubilados.html#parámetros-en-la-proyección-de-afiliados-jubilados",
+    "title": "4  Proyección afiliados jubilados",
+    "section": "4.2 Parámetros en la proyección de afiliados jubilados",
+    "text": "4.2 Parámetros en la proyección de afiliados jubilados\n\nTasa de incremento de la pensión\nTasa de revalorización\nMeses de pensión al año"
+  },
+  {
+    "objectID": "jubilados.html#campos-proyectados-para-afiliados-jubilados",
+    "href": "jubilados.html#campos-proyectados-para-afiliados-jubilados",
+    "title": "4  Proyección afiliados jubilados",
+    "section": "4.3 Campos proyectados para afiliados jubilados",
+    "text": "4.3 Campos proyectados para afiliados jubilados\n\n4.3.1 Pensión promedio para jubilados\n\\[PensProm_{x,j}=\\ \\frac{\\sum{CanJ_{x,j}\\times Pens_{x,j}}}{\\sum{CanJ_{x,j}}}\\]\nDonde:\n\\(PensProm_{x,j}\\): Pensión promedio para jubilados de edad \\(x\\) en el año \\(j\\).\n\\(CanJ_{x,j}\\): Cantidad de jubilados de edad \\(x\\) en el año \\(j\\).\n\\(Pens_{x,j}\\):Pensión que se le otorga a un jubilado de edad \\(x\\) en el año \\(j\\).\n\n\n4.3.2 Cantidad de afiliados jubilados proyectada\n\\[CanJ_{x,j}=CanJ_{x-1,j-1}\\times\\left(1-{qj}_{x-1}\\right)+Jub_{x-1,j-1}+Jub\\_sus_{x,j}\\]\nDonde:\n\\(CanJ_{x,j}\\): Cantidad de afiliados jubilados de edad \\(x\\) en el año \\(j\\).\n\\(Jub_{x-1,j-1}\\): Cantidad de afiliados activos que se jubilan a la edad \\(x-1\\) en el año \\(j-1\\).\n\\(Jub\\_sus_{x,j}\\): Cantidad de afiliados en suspenso que se jubilan a la edad \\(x\\) en el año \\(j\\).\n\\(qj_x-1\\): Probabilidad de que un jubilado fallezca a la edad \\(x-1\\).\n\n\n4.3.3 Pensión por vejez\n\\[\\begin{align*}\nPens_{x,j} = & \\left[Pens_{x-1,j-1}\\times\\left(1+{i_{pen}}_j\\right)\\times CanJ_{x-1,j-1}\\times\\left(1-{qj}_{x-1}\\right)\\right. \\\\&  \\underline{\\left.+ Jub_{x-1,j-1}\\times Sal_{x,j}\\times TR+Jub\\_sus_{x,j}\\times Sal\\_sus_{x,j}\\times TR \\right]}\\\\ & \\hspace{5.5cm}CanJ_{x,j}\n\\end{align*}\\]\nDonde1:\n\\(Pens_{x,j}\\): Pensión por vejez a la edad \\(x\\) en el año \\(j\\).\n\\(Pens_{x-1,j-1}\\): Pensión por vejez a la edad \\(x-1\\) en el año \\(j-1\\).\n\\({i_{pen}}_j\\): Porcentaje de Incremento salarial en el año \\(j\\).\n\\(Sal_{x,j}\\): Salario de los afiliados activos de edad de \\(x\\) en el año \\(j\\).\n\\(Sal\\_sus_{x,j}\\): Salario de los afiliados en suspenso de edad \\(x\\) en el año \\(j\\).\n\\(CanJ_{x,j}\\): Cantidad de afiliados jubilados de edad \\(x\\) en el año \\(j\\).\n\\(CanJ_{x-1,j-1}\\): Cantidad de afiliados jubilados de edad \\(x-1\\) en el año \\(j-1\\).\n\\(Jub_{x-1,j-1}\\): Cantidad de afiliados activos que se jubilan a la edad \\(x-1\\) en el año \\(j-1\\).\n\\(Jub\\_sus_{x,j}\\): Cantidad de afiliados en suspenso que se jubilan a la edad \\(x\\) en el año \\(j\\).\n\\(qj_{x-1}\\): Probabilidad de que un jubilado fallezca a la edad \\(x-1\\). \\(TR\\): Tasa de reemplazo a la edad de jubilación.\n\n\n4.3.4 Pago total de pensiones por jubilación al año\n\\[{PensT}_{x,j}=\\ {num\\_pen}_j\\times\\sum{CantJ_{x,j}\\times Pens_{x,j}}\\]\nDonde:\n\\({PensT}_{x,j}\\): Total de beneficio por pensión a jubilados de edad \\(x\\) en el año \\(j\\).\n\\({num\\_pen}_j\\): Numero de pensiones en el año \\(j\\).\n\\(CanJ_{x,j}\\): Cantidad de afiliados jubilados de edad \\(x\\) en el año \\(j\\).\n\\(Pens_{x,j}\\): Pensión por vejez a la edad \\(x\\) en el año \\(j\\).\n\n\n4.3.5 Cantidad de jubilados que fallecen\n\\[MueJ_{x,j}=CanJ_{x-1,j-1}\\times{qj}_{x-1}\\]\nDonde:\n\\(MueJ_{x,j}\\): Cantidad de jubilados que fallecen a la edad \\(x\\) en el año \\(j\\).\n\\(CanJ_{x-1,j-1}\\): Cantidad de afiliados jubilados de edad \\(x-1\\) en el año anterior.\n\\({qj}_{x-1}\\): Probabilidad de que un jubilado fallezca a la edad \\(x-1\\)."
+  },
+  {
+    "objectID": "jubilados.html#footnotes",
+    "href": "jubilados.html#footnotes",
+    "title": "4  Proyección afiliados jubilados",
+    "section": "",
+    "text": "Articulo N. 117, (Reglamento General de la Ley del Seguro Social, 2005)↩︎"
+  },
+  {
+    "objectID": "viudez.html#información-básica-para-viudez",
+    "href": "viudez.html#información-básica-para-viudez",
+    "title": "6  Proyección Viudez",
+    "section": "6.1 Información básica para viudez",
+    "text": "6.1 Información básica para viudez\n\nProbabilidad de muerte que tiene la persona viuda\nPorcentaje de que tiene un afiliado al fallecer de dejar una viudez\nEdad la persona viuda, \\(x\\)\nEdad del afiliado cotizante, \\(y\\)\nCantidad de viudeces\nMonto de la pensión por viudez."
+  },
+  {
+    "objectID": "viudez.html#parámetros-utilizados-para-la-proyección-por-viudez",
+    "href": "viudez.html#parámetros-utilizados-para-la-proyección-por-viudez",
+    "title": "6  Proyección Viudez",
+    "section": "6.2 Parámetros utilizados para la proyección por viudez",
+    "text": "6.2 Parámetros utilizados para la proyección por viudez\n\nTasa de incremento de la pensión\nTasa de revalorización\nMeses de pensión"
+  },
+  {
+    "objectID": "viudez.html#campos-proyectados-para-viudez",
+    "href": "viudez.html#campos-proyectados-para-viudez",
+    "title": "6  Proyección Viudez",
+    "section": "6.3 Campos proyectados para viudez",
+    "text": "6.3 Campos proyectados para viudez\n\n6.3.1 Cantidad proyectada de viudas\n\\[CantV_x=PorcV_x\\times\\left(Mue_y+\\ MueI_y+MueJ_y\\right)+CantV_{x-1}-MueV_{x-1}\\]\nDonde:\n\\(CantV_x\\): Cantidad de viudeces de edad \\(x\\) años.\n\\(PorcV_x\\): Porcentaje de que un participante deje una viudez de edad \\(x\\) años.\n\\(Mue_y\\): Cantidad de afiliados activos que fallecen a la edad de \\(y\\) años.\n\\(MueI_y\\): Cantidad de afiliados en estado de invalidez que fallecen a la edad de \\(y\\) años.\n\\(MueJ_y\\): Cantidad de afiliados jubilados que fallecen a la edad de \\(y\\) años.\n\\(MueV_{x-1}\\): Cantidad de personas viudas que fallecen de \\(x-1\\) años de edad.\n\n\n6.3.2 Cantidad de personas viudas que fallecen por edad\n\\[MueV_x=CantV_x\\times q_{xv}\\]\nDonde:\n\\(MueV_x\\): Cantidad de personas viudas que fallecen de edad \\(x\\) años.\n\\(CantV_x\\): Cantidad de personas viudas de edad \\(x\\) años.\n\\(q_{xv}\\): Probabilidad de fallecer que tiene una persona viuda la edad de \\(x\\) años.\n\n\n6.3.3 Pensión por viudez\n\\[\\begin{align*}\nPensV_x = & \\left[PensV_{x-1}\\times\\left(1+i_{pen}\\right)\\times\\left(CantV_{x-1}-MueV_{x-1}\\right)+PorcV_x\\times r_v\\right. \\\\& \\underline{ \\left. \\times\\left(Mue_y\\times Sal_y\\times r_j+MueI_y\\times PensI_y+MueJ_y\\times PensJ_y\\right)\\right]}\\\\ & \\hspace{5.5cm}CanJ_{x,j}\n\\end{align*}\\]\nDonde1:\n\\(PensV_x\\): Pensión por viudez a la edad de \\(x\\) años.\n\\(i_{pen}\\): Porcentaje de incremento de la pensión.\n\\(CantV_x\\): Cantidad de viudos de edad \\(x\\) años.\n\\(CantV_{x-1}\\): Cantidad de viudos de edad \\(x-1\\) años del año anterior.\n\\(MueV_{x-1}\\): Cantidad de viudos que fallecieron el año anterior a la edad de \\(x-1\\) años.\n\\(PorcV_x\\): Porcentaje de que un participante deje una viudez de edad \\(x\\) años.\n\\(Mue_y\\): Cantidad de afiliados activos que fallecieron el año anterior a la edad de \\(y\\) años.\n\\(MueI_y\\): Cantidad de afiliados en estado de invalidez que fallecieron el año anterior a la edad de \\(y\\) años.\n\\(MueJ_y\\): Cantidad de afiliados jubilados que fallecieron el año anterior a la edad de \\(y\\) años.\n\\(Sal_y\\): Salario de un afiliado activo a la edad de y años del año anterior.\n\\(PensI_y\\):Pensión por invalidez a la edad de y años del año anterior.\n\\(PensJ_y\\):Pensión por jubilación a la edad de y años del año anterior.\n\\(r_j\\): Tasa remplazo de pensiones por vejez.\n\\(r_v\\): Tasa remplazo de pensiones por viudez.\n\n\n6.3.4 Pago total de pensiones por viudez al año\n\\[PensTV=\\ \\left(1+i_{rev}\\right)\\times m_i\\times\\sum{CantV_x\\times P e n{sV}_x}\\]\nDonde:\n\\(PensTV\\): Pago total de pensiones por viudez al año. \\(i_{rev}\\): Tasa de revalorización.\n\\(m_p\\): Meses de pensión por viudez al año.\n\\(CantV_x\\): Cantidad de viudos de edad \\(x\\) años.\n\\(Pen{sV}_x\\): Pensión por viudez a la edad de \\(x\\) años."
+  },
+  {
+    "objectID": "viudez.html#footnotes",
+    "href": "viudez.html#footnotes",
+    "title": "6  Proyección Viudez",
+    "section": "",
+    "text": "Articulo N. 124, (Reglamento General de la Ley del Seguro Social, 2005)↩︎"
+  },
+  {
+    "objectID": "orfandad.html#información-básica-para-orfandad",
+    "href": "orfandad.html#información-básica-para-orfandad",
+    "title": "7  Proyección orfandad",
+    "section": "7.1 Información básica para orfandad",
+    "text": "7.1 Información básica para orfandad\n\nEdad del huérfano\nCantidad de huérfanos de edad y años\nPensión por orfandad\nParámetros utilizados para la proyección por orfandad\nTasa de incremento de la pensión\nTasa de revalorización\nMeses de pensión\nCampos proyectados para orfandad\n\n\n7.1.1 Cantidad de huérfanos proyectada por edad\n\\[CantH_y=CantH_{y-1}+CantHA_y+\\ CantHJ_y+\\ CantHI_y\\]\nDonde:\n\\(CantH_y\\): Cantidad de hijos huérfanos de edad \\(y\\) años.\n\\(CantH_{y-1}\\): Cantidad de huérfanos de edad \\(y-1\\) años del año anterior.\n\\(CantHA_y\\): Cantidad de huérfanos de edad y años de los participantes activos del año anterior.\n\\(CantHJ_y\\): Cantidad de huérfanos de edad y años de los jubilados del año anterior.\n\\(CantHI_y\\): Cantidad de huérfanos de edad y años de los inválidos del año anterior.\n\n\n7.1.2 Pensión por orfandad\n\\[\\begin{align*}\nPensH_{k,y} & = (PensH_{k-1,y}\\times\\left(1+i_h\\right)\\times CantH_{k-1,y}\\\\&+CantHA_y\\times\\frac{Sueldo_m+Sueldo_w}{2}\\times r_j\\times r_o\\\\&+CantHJ_y\\times\\frac{PensProm_m+\\ PensProm_w}{2}\\times r_o\\\\&+CantHI_y\\times\\frac{PensPromI_m+\\ PensPromI_w}{2}\\times r_o\n)/CantH_{k,y}\n\\end{align*}\\]\nDonde1:\n\\(PensH_{k,y}\\): Pensión por orfandad en el año \\(k\\) de un huérfano de edad \\(y\\) años.\n\\(i_h\\): Incremento de a pensión por orfandad.\n\\(CantH_{k-1,y}\\): Cantidad de hijos huérfanos de edad \\(y\\) años, en el año \\(k-1\\).\n\\(Sueldo_m\\): Sueldo promedio de los hombres activos.\n\\(Sueldo_w\\): Sueldo promedio de las mujeres activas.\n\\(CantHJ_y\\): Cantidad de huérfanos de edad \\(y\\) años de los jubilados.\n\\(CantHI_y\\): Cantidad de huérfanos de edad \\(y\\) años de los inválidos.\n\\(PensProm_m\\): Pensión promedio de los hombres jubilados.\n\\(PensProm_w\\): Pensión promedio de las mujeres jubiladas.\n\\(PensPro{mI}_m\\): Pensión promedio de los hombres inválidos.\n\\(PensPro{mI}_w\\): Pensión promedio de las mujeres invalidas.\n\\(r_j\\): Tasa remplazo de pensiones por vejez.\n\\(r_o\\): Tasa remplazo de pensiones por orfandad.\n\n\n7.1.3 Pensión total anual por orfandad\n\\[PensTH=m_i\\times\\left(1+i_{rev}\\right)\\times\\sum{CantH_x\\times PensH_x}\\]\nDonde:\n\\(m_i\\): Meses de pensión al año.\n\\(PensTH\\): Pensión total anual por orfandad.\n\\(i_{rev}\\): Tasa de revalorización de la pensión.\n\\(CantH_y\\): Cantidad de hijos huérfanos de edad \\(y\\) años.\n\\(PensH_y\\): Pensión por orfandad a los \\(y\\) años de edad."
+  },
+  {
+    "objectID": "orfandad.html#footnotes",
+    "href": "orfandad.html#footnotes",
+    "title": "7  Proyección orfandad",
+    "section": "",
+    "text": "Articulo N. 127, (Reglamento General de la Ley del Seguro Social, 2005)↩︎"
+  },
+  {
+    "objectID": "proyecciones.html#ingresos",
+    "href": "proyecciones.html#ingresos",
+    "title": "8  Resultados de la proyección",
+    "section": "8.1 Ingresos",
+    "text": "8.1 Ingresos\n\n8.1.1 Total de contribución\n\\[CT=PCon\\times m\\times\\sum{can\\times Sueldo}\\]\nDonde:\n\\(CT\\): Total de contribución.\n\\(PCon\\): Porcentaje de contribución.\n\\(m\\): Total de meses de contribución en un año.\n\\(Can\\): Cantidad de afiliados activos a la edad de \\(x\\) años.\n\\(Sueldo\\): Sueldo promedio de los afiliados activos a la edad de \\(x\\) años.\n\n\n\n8.1.2 Ingreso Financiero\n\\[IFin=IntGVN+IntGPatrI\\] Donde:\n\\(IFin\\): Ingreso Financiero.\n\\(IntGVN\\): Intereses generados por el valor.\n\\(IntGPatrI\\): Intereses generados por el patrimonio inicial"
+  },
+  {
+    "objectID": "proyecciones.html#egresos",
+    "href": "proyecciones.html#egresos",
+    "title": "8  Resultados de la proyección",
+    "section": "8.2 Egresos",
+    "text": "8.2 Egresos\n\n8.2.1 Gasto administrativo\n\\[GA=\\%GA\\times TI\\]\nDonde:\n\\(GA\\): Gasto adminidstrativo.\n\\(\\%GA\\): Porcentaje de gasto administrativo.\n\\(TI\\): Total de ingresos (suma de las CT tanto de hombres como mujeres)\nNota: En el supuesto %GA se utiliza un estimador de la relación del gasto administrativo entre el total de contribuciones, pero considerando la tasa del 3% de contribución. En caso de que en un análisis se modifique la tasa de contribución el \\(\\%GA\\) se debe ajustar multiplicándolo por el factor:\n\\[\\frac{0.03}{tasa\\_contribucion\\_propuesta}\\]\n\n\n8.2.2 Pensión total anual por vejez\n\\(PensionT\\): Pensiones pagadas por vejez anualmente\n\n\n8.2.3 Pensión total anual por invalidez\n\\(PensTI\\): Pensiones pagadas por invalidez anualmente\n\n\n8.2.4 Pensión total anual por viudez\n\\(PensTV\\): Pensiones pagadas por viudez anualmente\n\n\n8.2.5 Pensión total anual por orfandad\n\\(PensTH\\): Pensiones pagadas por orfandad anualmente\n\n\n8.2.6 Gastos por servicios médicos\n\\[GServMed=\\left(PensionT+PensTI\\right)\\times\\%AtSal\\]\nDonde1:\n\\(GServMed\\): Gastos por servicios médicos para jubilados y pensionados anual.\n\\(PensionT\\): Pensiones pagadas por vejez anualmente.\n\\(PensTI\\): Pensiones pagadas por invalidez anualmente.\n\\(\\%AtSal\\): Porcentaje del seguro de atención a la salud.\n\n\n8.2.7 Gastos por servicios fúnebres\n\\[GFun=2\\times Smin\\times\\left(Mue+MueJ+MueI\\right)\\times\\%Smin\\]\nDonde2:\n\\(GFun\\): Gastos por servicios fúnebres anual.\n\\(Smin\\): Salario mínimo vigente en la categoría más baja.\n\\(Mue\\): Cantidad total de afiliados activos que fallecen en el año.\n\\(MueJ\\): Cantidad total de jubilados que fallecen en el año.\n\\(MueI\\): Cantidad total de afiliados en estado de invalidez que fallecen en el año.\n\\(\\%Smin\\): Porcentaje de crecimiento anual del salario mínimo en su categoría más baja.\n\n\n8.2.8 Total de egresos\n\\[TE=GA+PensionT+PensTi+PensTV+PensTH+GservMed+GFun\\]\nDonde:\n\\(TE\\): Total de egresos al año.\n\\(GA\\): Gasto adminidstrativo.\n\\(PensionT\\): Pensiones pagadas por vejez anualmente.\n\\(PensTI\\): Pensiones pagadas por invalidez anualmente.\n\\(PensTV\\): Pensiones pagadas por viudez anualmente.\n\\(PensTH\\): Pensiones pagadas por orfandad anualmente.\n\\(GServMed\\): Gastos por servicios médicos para jubilados y pensionados anual.\n\\(GFun\\): Gastos por servicios fúnebres anual."
+  },
+  {
+    "objectID": "proyecciones.html#valor-neto",
+    "href": "proyecciones.html#valor-neto",
+    "title": "8  Resultados de la proyección",
+    "section": "8.3 Valor Neto",
+    "text": "8.3 Valor Neto\n\n8.3.1 Valor Neto\n\\[VN=TI-TE\\] Donde:\n\\(VN\\): Valor neto.\n\\(TI\\): Total de ingresos.\n\\(TE\\): Total de egresos.\n\n\n8.3.2 Intereses generados\n\\[IntGVN=\\frac{VN}{2}\\times\\%IntGVN\\]\nDonde:\n\\(IntGVN\\): Intereses generados por el valor neto.\n\\(VN\\): Valor neto.\n\\(\\%IntGVN\\): Porcentaje de intereses generados por el valor neto.\n\\[ \\% TRN = (1+inf)\\times (1+tr)- 1 \\]\nDonde:\n\\(\\%TRN\\): Tasa de rendimiento nominal del fondo.\n\\(tr\\): Tasa de rendimiento real.\n\\(inf\\): Inflación."
+  },
+  {
+    "objectID": "proyecciones.html#patrimonio",
+    "href": "proyecciones.html#patrimonio",
+    "title": "8  Resultados de la proyección",
+    "section": "8.4 Patrimonio",
+    "text": "8.4 Patrimonio\n\n8.4.1 Intereses generados por el patrimonio inicial\n\\[IntGPatrI= \\%IntGPatrI \\times PatrI\\]\nDonde:\n\\(IntGPatrI\\): Intereses generados por el patrimonio inicial.\n\\(\\%IntGPatrI\\): Porcentaje de intereses generados por el patrimonio inicial.\n\\(PatrI\\): Patrimonio inicial."
+  },
+  {
+    "objectID": "proyecciones.html#excedentes",
+    "href": "proyecciones.html#excedentes",
+    "title": "8  Resultados de la proyección",
+    "section": "8.5 Excedentes",
+    "text": "8.5 Excedentes\n\\[Exc=VN+IntGVN+IntGPatrI\\]\nDonde:\n\\(Exc\\): Excedentes del año.\n\\(IntGVN\\): Intereses generados por el valor neto.\n\\(VN\\): Valor neto.\n\\(IntGPatrI\\): Intereses generados por el patrimonio inicial."
+  },
+  {
+    "objectID": "proyecciones.html#patrimonio-final",
+    "href": "proyecciones.html#patrimonio-final",
+    "title": "8  Resultados de la proyección",
+    "section": "8.6 Patrimonio final",
+    "text": "8.6 Patrimonio final\n\\[PatrF=PatrI+Exc\\]\nDonde:\n\\(PatrF\\): Patrimonio final.\n\\(PatrI\\): Patrimonio inicial.\n\\(Exc\\): Excedentes del año."
+  },
+  {
+    "objectID": "proyecciones.html#patrimonio-real",
+    "href": "proyecciones.html#patrimonio-real",
+    "title": "8  Resultados de la proyección",
+    "section": "8.7 Patrimonio real",
+    "text": "8.7 Patrimonio real\n\\[PatrR=PatrF\\times\\left(1+inf\\right)^{-\\left(k-n\\right)} \\quad \\text{para}\\quad k\\geq n+1\\]\nDonde:\n\\(PatrR\\): Patrimonio real.\n\\(PatrF\\): Patrimonio final.\n\\(inf\\): Inflación.\n\\(n\\): Año correspondiente al estudio.\n\n\n\n\n“Reglamento General de La Ley Del Seguro Social.” 2005. https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf.\n\n\n“Reglamento Para La Atención Medica de Los Jubilados y Pensionados.” 2009."
+  },
+  {
+    "objectID": "proyecciones.html#footnotes",
+    "href": "proyecciones.html#footnotes",
+    "title": "8  Resultados de la proyección",
+    "section": "",
+    "text": "Articulo N. 12, (“Reglamento Para La Atención Medica de Los Jubilados y Pensionados” 2009)↩︎\nArtículo N. 57, (“Reglamento General de La Ley Del Seguro Social” 2005)↩︎"
+  }
+]

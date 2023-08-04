@@ -1,0 +1,74 @@
+# Proyección Invalidez
+
+## Información básica para invalidez
+
+a)  Probabilidad de muerte que tiene un afiliado en estado de invalidez.
+b)  Edad del afiliado en estado de invalidez.
+c)  Cantidad de afiliados en estado de invalidez por edad.
+d)  Monto de la pensión por invalidez.
+
+## Parámetros utilizados para la proyección por invalidez
+
+a)  Tasa de incremento de la pensión
+b)  Tasa de revalorización
+
+## Campos proyectados para invalidez
+
+### Cantidad de afiliados en estado de invalidez por edad
+
+$$CanI_{x,j}=Inv_{x-1,j-1}+CanI_{x-1,j-1}-MueI_{x-1,j-1}$$
+
+Donde:
+
+$CanI_{x,j}$: Cantidad de afiliados en estado de invalidez de edad $x$ en el año $j$.\
+$Inv_{x-1,j-1}$: Afiliados activos que se invalidan a la edad $x-1$ en el año anterior.\
+$CanI_{x-1,j-1}$: Cantidad de afiliados en estado de invalidez de edad $x-1$ en el año anterior.\
+$MueI_{x-1,j-1}$: Afiliados en estado de invalidez que fallecen de edad $x-1$ en el año anterior.
+
+### Cantidad de afiliados en estado de invalidez que fallecen
+
+$$MueI_{x,j}=CanI_{x,j}\times{qi}_x$$
+
+Donde:
+
+$MueI_{x,j}$: Afiliados en estado de invalidez que fallecen de edad $x$ en el año $j$.\
+$CanI_{x,j}$: Cantidad de afiliados en estado de invalidez de edad $x$ en el año $j$.\
+${qi}_x$: Probabilidad de que un inválido fallezca a la edad $x$.
+
+### Pensión por invalidez
+
+$$Pen{sI}_{x,j}=\ \frac{Pen{sI}_{x-1,j-1}\times\left(1+i_{pen}\right)\times{CanI}_{x-1,J-1}\left(1-{qi}_{x-1}\right)+Inv_{x,j}\times Sal_{x,j}\times0.4}{CanI_{x,j}}$$
+
+Donde[^invalidez-1]:
+
+[^invalidez-1]: Articulo N. 111, [(Reglamento General de la Ley del Seguro Social, 2005)](https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf)
+
+$Pen{sI}_{x,j}$: Monto de pension al fallecimiento de un inválido de edad $x$ en el año $j$.\
+$i_{pen}$: Porcentaje de incremento de la pensión.\
+$Sal_{x,j}$: Salario de los afiliados activos a la edad de $x$ años.\
+$CantI_{x,j}$: Cantidad de afiliados en estado de invalidez a la edad de $x$ años.\
+$Inv_{x,j}$: Afiliados activos que se invalidaron a la edad de $x$ años.\
+$CanI_{x-1,j-1}$: Cantidad de afiliados en estado de invalidez de edad $x-1$ años.\
+$MueI_{x-1,j-1}$: Cantidad de afiliados en estado de invalidez que fallecieron a la edad de $x-1$ años.\
+${qi}_{x-1}$: Probabilidad de que un inválido fallezca a la edad $x-1$.
+
+### Pensión promedio por invalidez
+
+$${PensPromI}_{x,j}=\ \frac{\sum{CanI_{x,j}\times P e n{sI}_{x,j}}}{\sum{CanI_{x,j}}}$$
+
+Donde:
+
+${PensPromI}_{x,j}$: Pensión promedio por invalidez.\
+$CanI_{x,j}$: Cantidad de invalidez a la edad $x$ años.\
+$Pen{sI}_{x,j}$: Pensión mensual para un afiliado en estado de invalidez de $x$ años.
+
+### Pago total de pensiones por invalidez al año
+
+$${PenIT}_{x,j}={num\_pension}_j\times\sum{{PensI}_{x,j}\times{CanI}_{x,j}}$$
+
+Donde:
+
+${num\_pension}_j$: Número de pensiones en el año $j$.\
+${PensIT}_{x,j}$: Pago total de pensiones por invalidez al año.\
+$CanI_{x,j}$: Cantidad de afiliados en estado de invalidez de $x$ años.\
+$PensI_{x,j}$: Pensión mensual para un afiliado en estado de invalidez de $x$ años.

@@ -1,0 +1,49 @@
+# Parametros generales
+
+
+| Variable                                                | Notación       |
+|---------------------------------------------------------|----------------|
+| Porcentaje de crecimiento poblacional                   | $pIn$          |
+| Tasa técnica real                                       | $tr$           |
+| Tasa inflación                                          | $inf$          |
+| Tasa rendimiento efectiva                               | $\%TRN$        |
+| Tasa incremento salarial                                | $i_{sal}$      |
+| Tasa total de contribución                              | $PCon$         |
+| Porcentaje de gastos administrativos                    | $\%GA$         |
+| Número de contribuciones al año                         | $m$            |
+| Porcentaje aporte salud pensiones por invalidez y vejez | $\%AtSal$      |
+| Número de pensiones al año                              | $m_p$          |
+| Diferencia edades hombre y mujer casados                | $d$            |
+| Tasa remplazo pensiones viudez                          | $r_v$          |
+| Tasa remplazo pensiones orfandad                        | $r_o$          |
+| Beneficio ayuda fúnebre 2019                            | $2\times Smin$ |
+| Tasa crecimiento del Beneficio de ayuda fúnebre         | $\%Smin$       |
+| Tasa de revalorización                                  | $i_{rev}$      |
+| Edad obligatoria de jubilación                          | $E_{oj}$       |
+
+## Fórmula para estimar probabilidades de los decrementos múltiples
+
+$$q_x^{(i)}=q_x^{\prime(i)}\left[1-\frac{\sum_{j=1,j\neq i}^{4}q_x^{\prime(j)}}{2}+\frac{q_x^{\prime(i+1)}\times q_x^{\prime(i+2)}+\left(q_x^{\prime(i+1)}+q_x^{\prime(i+2)}\right)\times q_x^{\prime(k+3)}}{3}-\frac{\prod_{j=1,j\neq i}^{4}q_x^{\prime(j)}}{4}\right]$$
+
+Donde:
+
+$q_x^{\prime(i)}$: Es la probabilidad individual de salir de un grupo por la causa i para una persona de edad x.\
+$q_x^{(i)}$: Es la probabilidad de salir del grupo por la causa i para una persona de edad x.\
+$i$: Causa de salida, $i=1,2,3,4$
+
+Nota: Entiéndase la notación siguiente como $(i+x)=modulo(i+x,\ 4)$
+
+## Notación de tablas de probabilidades
+
+${qa}_x$: Probabilidad de que un activo fallezca a la edad $x$.\
+${ia}_x$: Probabilidad de que un activo se invalide a la edad $x$.\
+${pja}_x$: Probabilidad de que un activo se jubile a la edad $x$.\
+${ra}_x$: Probabilidad de que un activo se retire a la edad $x$.\
+${qa\_dm}_x$: Probabilidad de decremento múltiple de que un activo fallezca a la edad $x$.\
+${ia\_dm}_x$: Probabilidad de decremento múltiple de que un activo se invalide a la edad $x$.\
+${pja\_dm}_x$: Probabilidad de decremento múltiple de que un activo se jubile a la edad $x$.\
+${ra\_dm}_x$: Probabilidad de decremento múltiple de que un activo se retire a la edad $x$.\
+${qi}_x$: Probabilidad de que un inválido fallezca a la edad $x$.\
+${qj}_x$: Probabilidad de que un jubilado fallezca a la edad $x$.\
+${ping}_x$: Probabilidad de que un activo ingrese al sistema a la edad $x$.\
+$pcas_x$: Probabilidad de que un afiliado este casado a la edad $x$.

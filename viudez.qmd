@@ -1,0 +1,78 @@
+# Proyección Viudez
+
+## Información básica para viudez
+
+a)  Probabilidad de muerte que tiene la persona viuda
+b)  Porcentaje de que tiene un afiliado al fallecer de dejar una viudez
+c)  Edad la persona viuda, $x$
+d)  Edad del afiliado cotizante, $y$
+e)  Cantidad de viudeces
+f)  Monto de la pensión por viudez.
+
+## Parámetros utilizados para la proyección por viudez
+
+a)  Tasa de incremento de la pensión
+b)  Tasa de revalorización
+c)  Meses de pensión
+
+## Campos proyectados para viudez
+
+### Cantidad proyectada de viudas
+
+$$CantV_x=PorcV_x\times\left(Mue_y+\ MueI_y+MueJ_y\right)+CantV_{x-1}-MueV_{x-1}$$
+
+Donde:
+
+$CantV_x$: Cantidad de viudeces de edad $x$ años.\
+$PorcV_x$: Porcentaje de que un participante deje una viudez de edad $x$ años.\
+$Mue_y$: Cantidad de afiliados activos que fallecen a la edad de $y$ años.\
+$MueI_y$: Cantidad de afiliados en estado de invalidez que fallecen a la edad de $y$ años.\
+$MueJ_y$: Cantidad de afiliados jubilados que fallecen a la edad de $y$ años.\
+$MueV_{x-1}$: Cantidad de personas viudas que fallecen de $x-1$ años de edad.
+
+### Cantidad de personas viudas que fallecen por edad
+
+$$MueV_x=CantV_x\times q_{xv}$$
+
+Donde:
+
+$MueV_x$: Cantidad de personas viudas que fallecen de edad $x$ años.\
+$CantV_x$: Cantidad de personas viudas de edad $x$ años.\
+$q_{xv}$: Probabilidad de fallecer que tiene una persona viuda la edad de $x$ años.
+
+### Pensión por viudez
+
+```{=tex}
+\begin{align*}
+PensV_x = & \left[PensV_{x-1}\times\left(1+i_{pen}\right)\times\left(CantV_{x-1}-MueV_{x-1}\right)+PorcV_x\times r_v\right. \\& \underline{ \left. \times\left(Mue_y\times Sal_y\times r_j+MueI_y\times PensI_y+MueJ_y\times PensJ_y\right)\right]}\\ & \hspace{5.5cm}CanJ_{x,j}
+\end{align*}
+```
+Donde[^3]:
+
+[^3]: Articulo N. 124, [(Reglamento General de la Ley del Seguro Social, 2005)](https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf)
+
+$PensV_x$: Pensión por viudez a la edad de $x$ años.\
+$i_{pen}$: Porcentaje de incremento de la pensión.\
+$CantV_x$: Cantidad de viudos de edad $x$ años.\
+$CantV_{x-1}$: Cantidad de viudos de edad $x-1$ años del año anterior.\
+$MueV_{x-1}$: Cantidad de viudos que fallecieron el año anterior a la edad de $x-1$ años.\
+$PorcV_x$: Porcentaje de que un participante deje una viudez de edad $x$ años.\
+$Mue_y$: Cantidad de afiliados activos que fallecieron el año anterior a la edad de $y$ años.\
+$MueI_y$: Cantidad de afiliados en estado de invalidez que fallecieron el año anterior a la edad de $y$ años.\
+$MueJ_y$: Cantidad de afiliados jubilados que fallecieron el año anterior a la edad de $y$ años.\
+$Sal_y$: Salario de un afiliado activo a la edad de y años del año anterior.\
+$PensI_y$:Pensión por invalidez a la edad de y años del año anterior.\
+$PensJ_y$:Pensión por jubilación a la edad de y años del año anterior.\
+$r_j$: Tasa remplazo de pensiones por vejez.\
+$r_v$: Tasa remplazo de pensiones por viudez.
+
+### Pago total de pensiones por viudez al año
+
+$$PensTV=\ \left(1+i_{rev}\right)\times m_i\times\sum{CantV_x\times P e n{sV}_x}$$
+
+Donde:
+
+$PensTV$: Pago total de pensiones por viudez al año. $i_{rev}$: Tasa de revalorización.\
+$m_p$: Meses de pensión por viudez al año.\
+$CantV_x$: Cantidad de viudos de edad $x$ años.\
+$Pen{sV}_x$: Pensión por viudez a la edad de $x$ años.

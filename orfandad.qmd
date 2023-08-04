@@ -1,0 +1,62 @@
+# Proyección orfandad
+
+## Información básica para orfandad
+
+a)  Edad del huérfano
+b)  Cantidad de huérfanos de edad y años
+c)  Pensión por orfandad
+d)  Parámetros utilizados para la proyección por orfandad
+e)  Tasa de incremento de la pensión
+f)  Tasa de revalorización
+g)  Meses de pensión
+h)  Campos proyectados para orfandad
+
+### Cantidad de huérfanos proyectada por edad
+
+$$CantH_y=CantH_{y-1}+CantHA_y+\ CantHJ_y+\ CantHI_y$$
+
+Donde:
+
+$CantH_y$: Cantidad de hijos huérfanos de edad $y$ años.\
+$CantH_{y-1}$: Cantidad de huérfanos de edad $y-1$ años del año anterior.\
+$CantHA_y$: Cantidad de huérfanos de edad y años de los participantes activos del año anterior.\
+$CantHJ_y$: Cantidad de huérfanos de edad y años de los jubilados del año anterior.\
+$CantHI_y$: Cantidad de huérfanos de edad y años de los inválidos del año anterior.
+
+### Pensión por orfandad
+
+```{=tex}
+\begin{align*}
+PensH_{k,y} & = (PensH_{k-1,y}\times\left(1+i_h\right)\times CantH_{k-1,y}\\&+CantHA_y\times\frac{Sueldo_m+Sueldo_w}{2}\times r_j\times r_o\\&+CantHJ_y\times\frac{PensProm_m+\ PensProm_w}{2}\times r_o\\&+CantHI_y\times\frac{PensPromI_m+\ PensPromI_w}{2}\times r_o
+)/CantH_{k,y}
+\end{align*}
+```
+Donde[^orfandad-1]:
+
+[^orfandad-1]: Articulo N. 127, [(Reglamento General de la Ley del Seguro Social, 2005)](https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf)
+
+$PensH_{k,y}$: Pensión por orfandad en el año $k$ de un huérfano de edad $y$ años.\
+$i_h$: Incremento de a pensión por orfandad.\
+$CantH_{k-1,y}$: Cantidad de hijos huérfanos de edad $y$ años, en el año $k-1$.\
+$Sueldo_m$: Sueldo promedio de los hombres activos.\
+$Sueldo_w$: Sueldo promedio de las mujeres activas.\
+$CantHJ_y$: Cantidad de huérfanos de edad $y$ años de los jubilados.\
+$CantHI_y$: Cantidad de huérfanos de edad $y$ años de los inválidos.\
+$PensProm_m$: Pensión promedio de los hombres jubilados.\
+$PensProm_w$: Pensión promedio de las mujeres jubiladas.\
+$PensPro{mI}_m$: Pensión promedio de los hombres inválidos.\
+$PensPro{mI}_w$: Pensión promedio de las mujeres invalidas.\
+$r_j$: Tasa remplazo de pensiones por vejez.\
+$r_o$: Tasa remplazo de pensiones por orfandad.
+
+### Pensión total anual por orfandad
+
+$$PensTH=m_i\times\left(1+i_{rev}\right)\times\sum{CantH_x\times PensH_x}$$
+
+Donde:
+
+$m_i$: Meses de pensión al año.\
+$PensTH$: Pensión total anual por orfandad.\
+$i_{rev}$: Tasa de revalorización de la pensión.\
+$CantH_y$: Cantidad de hijos huérfanos de edad $y$ años.\
+$PensH_y$: Pensión por orfandad a los $y$ años de edad.

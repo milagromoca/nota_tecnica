@@ -1,0 +1,30 @@
+project:
+  type: book
+  output-dir: docs #sirve para convertir todos los documentos a HTML para subirlos a la web
+
+book:
+  title: "Nota Técnica de Proyección de Flujos de Efectivo del Régimen del Invalidez, Vejez y Muerte "
+  author: "Milagro Morales"
+  date: "2/8/2023"
+  chapters:
+    - index.qmd
+    - parametros_generales.qmd
+    - activos.qmd
+    - suspenso.qmd
+    - jubilados.qmd
+    - invalidez.qmd
+    - viudez.qmd
+    - orfandad.qmd
+    - proyecciones.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

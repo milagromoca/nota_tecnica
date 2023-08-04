@@ -1,0 +1,80 @@
+# Proyección afiliados jubilados
+
+## Información básica afiliados jubilados
+
+a)  Probabilidad de muerte de un afilado jubilado.
+b)  Edad del afiliado jubilado.
+c)  Cantidad de afiliados jubilados por edad.
+d)  Monto de pensión mensual para jubilados.
+
+## Parámetros en la proyección de afiliados jubilados
+
+a)  Tasa de incremento de la pensión
+b)  Tasa de revalorización
+c)  Meses de pensión al año
+
+## Campos proyectados para afiliados jubilados
+
+### Pensión promedio para jubilados
+
+$$PensProm_{x,j}=\ \frac{\sum{CanJ_{x,j}\times Pens_{x,j}}}{\sum{CanJ_{x,j}}}$$
+
+Donde:
+
+$PensProm_{x,j}$: Pensión promedio para jubilados de edad $x$ en el año $j$.\
+$CanJ_{x,j}$: Cantidad de jubilados de edad $x$ en el año $j$.\
+$Pens_{x,j}$:Pensión que se le otorga a un jubilado de edad $x$ en el año $j$.
+
+### Cantidad de afiliados jubilados proyectada
+
+$$CanJ_{x,j}=CanJ_{x-1,j-1}\times\left(1-{qj}_{x-1}\right)+Jub_{x-1,j-1}+Jub\_sus_{x,j}$$
+
+Donde:
+
+$CanJ_{x,j}$: Cantidad de afiliados jubilados de edad $x$ en el año $j$.\
+$Jub_{x-1,j-1}$: Cantidad de afiliados activos que se jubilan a la edad $x-1$ en el año $j-1$.\
+$Jub\_sus_{x,j}$: Cantidad de afiliados en suspenso que se jubilan a la edad $x$ en el año $j$.\
+$qj_x-1$: Probabilidad de que un jubilado fallezca a la edad $x-1$.
+
+### Pensión por vejez
+
+```{=tex}
+\begin{align*}
+Pens_{x,j} = & \left[Pens_{x-1,j-1}\times\left(1+{i_{pen}}_j\right)\times CanJ_{x-1,j-1}\times\left(1-{qj}_{x-1}\right)\right. \\&  \underline{\left.+ Jub_{x-1,j-1}\times Sal_{x,j}\times TR+Jub\_sus_{x,j}\times Sal\_sus_{x,j}\times TR \right]}\\ & \hspace{5.5cm}CanJ_{x,j}
+\end{align*}
+```
+Donde[^1]:
+
+[^1]: Articulo N. 117, [(Reglamento General de la Ley del Seguro Social, 2005)](https://www.cnbs.gob.hn/files/leyes/Reglamento_General_Ley_Seguro_Social.pdf)
+
+$Pens_{x,j}$: Pensión por vejez a la edad $x$ en el año $j$.\
+$Pens_{x-1,j-1}$: Pensión por vejez a la edad $x-1$ en el año $j-1$.\
+${i_{pen}}_j$: Porcentaje de Incremento salarial en el año $j$.\
+$Sal_{x,j}$: Salario de los afiliados activos de edad de $x$ en el año $j$.\
+$Sal\_sus_{x,j}$: Salario de los afiliados en suspenso de edad $x$ en el año $j$.\
+$CanJ_{x,j}$: Cantidad de afiliados jubilados de edad $x$ en el año $j$.\
+$CanJ_{x-1,j-1}$: Cantidad de afiliados jubilados de edad $x-1$ en el año $j-1$.\
+$Jub_{x-1,j-1}$: Cantidad de afiliados activos que se jubilan a la edad $x-1$ en el año $j-1$.\
+$Jub\_sus_{x,j}$: Cantidad de afiliados en suspenso que se jubilan a la edad $x$ en el año $j$.\
+$qj_{x-1}$: Probabilidad de que un jubilado fallezca a la edad $x-1$. $TR$: Tasa de reemplazo a la edad de jubilación.
+
+### Pago total de pensiones por jubilación al año
+
+$${PensT}_{x,j}=\ {num\_pen}_j\times\sum{CantJ_{x,j}\times Pens_{x,j}}$$
+
+Donde:
+
+${PensT}_{x,j}$: Total de beneficio por pensión a jubilados de edad $x$ en el año $j$.\
+${num\_pen}_j$: Numero de pensiones en el año $j$.\
+$CanJ_{x,j}$: Cantidad de afiliados jubilados de edad $x$ en el año $j$.\
+$Pens_{x,j}$: Pensión por vejez a la edad $x$ en el año $j$.
+
+### Cantidad de jubilados que fallecen
+
+$$MueJ_{x,j}=CanJ_{x-1,j-1}\times{qj}_{x-1}$$
+
+Donde:
+
+$MueJ_{x,j}$: Cantidad de jubilados que fallecen a la edad $x$ en el año $j$.\
+$CanJ_{x-1,j-1}$: Cantidad de afiliados jubilados de edad $x-1$ en el año anterior.\
+${qj}_{x-1}$: Probabilidad de que un jubilado fallezca a la edad $x-1$.

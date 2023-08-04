@@ -1,0 +1,126 @@
+# Proyección afiliados activos
+
+## Infromación básica afiliados activos
+
+a)  Distribución de probabilidad para la jubilación: Se ha observado que no todos los afiliados que ya cumplen con los requisitos de jubilación se retiran justo a la edad que los cumplen, por lo que se ha tomado en cuenta esta distribución de la probabilidad para la jubilación de afiliados activos.
+b)  Distribución de probabilidad para ingresar al sistema.
+c)  Edad del afiliado activo.
+d)  Cantidad de afiliados activos por edad.
+e)  Salario.
+
+## Parámetros en la proyección de afiliados activos
+
+a)  Porcentaje de crecimiento poblacional
+b)  Tasa de incremento salarial
+c)  Numero de contribuciones al año
+d)  Numero de pensiones al año
+e)  Porcentaje de contribución
+
+## Campos proyectados para afiliados Activos
+
+### Cantidad de afiliados activos que se invalidan
+
+$$Inv_{x,j}=Can_{x,j}\times{ia\_dm}_x$$
+
+Donde:
+
+$Inv_{x,j}$: Cantidad de afiliados activos que se invalidan a la edad $x$ en el año $j$.\
+$Can_{x,j}$: Cantidad de afiliados activos a la edad $x$ en el año $j$.\
+${ia\_dm}_x$: Probabilidad de decremento múltiple de que un activo se invalide a la edad $x$.
+
+### Cantidad de afiliados activos que fallecen
+
+$$Mue_{x,j}=Can_{x,j}\times{qa\_dm}_x$$
+
+Donde:
+
+$Mue_{x,j}$: Cantidad de afiliados activos que fallecen a la edad $x$ en el año $j$.\
+$Can_{x,j}$: Cantidad de afiliados activos a la edad $x$ en el año $j$.\
+${qa\_dm}_x$: Probabilidad de decremento múltiple de que un activo fallezca a la edad $x$.
+
+### Cantidad de afiliados activos que se jubilan
+
+$$Jub_{x,j}=Can_{x,j}\times p{ja\_dm}_x$$
+
+Donde:
+
+$Jub_{x,j}$: Cantidad de afiliados activos que se jubila a la edad $x$ en el año $j$.\
+$Can_{x,j}$: Cantidad de afiliados activos a la edad $x$ en el año $j$.\
+$p{ja\_dm}_x$: Probabilidad de decremento múltiple de que un activo se jubile a la edad $x$.
+
+### Incremento de afiliados activos
+
+$${CIn}_j={pIn}_j\ \times{CanT}_j$$
+
+Donde:
+
+${CIn}_j$: Incremento de afiliados activos para el año $j$.\
+${pIn}_j$: Tasa de incremento poblacional.\
+${CanT}_j$: Cantidad total de afiliados activos.\
+${CanT}_j=\sum_{x=18}^{110}{Can_{x,j-1}}$
+
+### Incremento total de afiliados activos
+
+$${InT}_j={CIn}_j+\sum_{x=18}^{109}\left({qtot}_{x+1}\times{Can}_{x,j-1}\right)$$
+
+Donde:
+
+${InT}_j$: Incremento total de los afiliados activos en el año $j$.\
+${CIn}_j$: Incremento de afiliados activos en el año $j$.\
+$Can_{x,j-1}$: Cantidad de afiliados activos de edad $x$ en el año anterior.\
+${qtot}_x$: Probabilidad total de salidas del sistema para un afiliado de edad $x$.
+
+$${qtot}_x={qa\_dm}_x+{ia\_dm}_x+{ra\_dm}_x+p{ja\_dm}_x$$
+
+### Porcentaje real de incremento de afiliados activos
+
+$${PRIn}_j=\ \frac{{InT}_j}{{CanT}_j}$$
+
+Donde:
+
+${PRIn}_j$: Porcentaje real de incremento de afiliados activos en el año $j$.\
+${InT}_j$: Incremento total de los afiliados activos en el año $j$.\
+${CanT}_j$: Cantidad total de afiliados activos en el año $j$.
+
+### Total de contribución de afiliados activos
+
+$${CT}_j={PCon}_j\ \times m\times\sum{Can_{x,j}\times{Sueldo}_{x,j}}$$
+
+Donde:
+
+${CT}_j$: Total de contribución de afiliados activos en el año $j$.\
+${PCon}_j$: Porcentaje de contribución que realizan los afiliados activos en el año $j$.\
+$m$: Total de meses de contribución que realizan los afiliados activos en un año.\
+$Can_{x,j}$: Cantidad de afiliados activos de edad $x$ en el año $j$.\
+${Suledo}_{x,j}$: Sueldo promedio de los afiliados activos de edad $x$ en el año $j$.
+
+### Variación Interanual de la Cantidad de Afiliados Activos
+
+$$Vi_{x,j}=ping_x\ \times{InT}_j$$
+
+Donde:
+
+$Vi_{x,j}$: Variación interanual de la cantidad de afiliados activos de edad $x$ en el año $j$.\
+$ping_x$: Probabilidad de que un activo ingrese al sistema a la edad $x$.\
+${InT}_j$: Incremento total de afiliados activos en el año $j$.
+
+### Cantidad de afiliados activos proyectada
+
+$$Can_{x,j}=Can_{x-1,j-1}\times\left(1-{qtot}_{x-1}\right)+\ Vi_{x,j}$$
+
+Donde:
+
+$Can_{x,j}$: Cantidad de afiliados activos de edad $x$ en el año $j$.\
+$Can_{x-1,j-1}$: Cantidad de afiliados activos de edad $x-1$ en el año anterior.\
+$Vi_{x,j}$: Variación interanual de la cantidad de afiliados activos de edad $x$ en el año $j$.\
+${qtot}_{x-1}$: Probabilidad total de salidas del sistema para un afiliado de edad $x-1$.
+
+### Sueldo promedio de los afiliados activos proyectado
+
+$$Sueldo_{x,j}=Sueldo_{x,j-1}\times\left(1+{i_{sal}}_j\right)$$
+
+Donde:
+
+$Sueldo_{x,j}$: Sueldo promedio de afiliados activos de edad $x$ en el año $j$.\
+$Sueldo_{x,j-1}$: Sueldo promedio de afiliados activos de edad $x$ en el año anterior.\
+${i_{sal}}_j$: Porcentaje de Incremento salarial en el año $j$.
